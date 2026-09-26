@@ -1,0 +1,17 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      BOOKING_DB_PATH: /data/bookings.sqlite3
+      BOT_PROXY_URL: direct
+      PORT: 8080
+    volumes:
+      - booking_data:/data
+    ports:
+      - "127.0.0.1:8080:8080"
+    stop_grace_period: 30s
+
+volumes:
+  booking_data:

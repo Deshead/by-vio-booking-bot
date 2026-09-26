@@ -1,0 +1,15 @@
+.env
+.env.*
+.venv
+.git
+data
+backups
+dist
+tests
+docs
+portfolio
+__pycache__
+**/__pycache__
+*.log
+*.log.*
+.bot.lock
